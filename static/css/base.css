@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700&display=swap');
+
+*, p, li, ul{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: blueviolet;
+}
+
+body{
+    background: url('/static/img/fundos/honkai.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+header{
+    background: #0E011E;
+    padding: 7px 0px;
+    border-bottom: 2px solid #190334;
+}
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+}
+
+header div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#logo{
+    height: 50px;
+}
+
+header nav ul li a {
+    padding: 10px;
+    margin-left: 10px;
+
+}
+
+header nav ul li a:hover {
+    text-shadow: 2px 2px 10px blueviolet;
+    text-decoration: underline;
+}
+
+/*Barra pesquisa*/
+#search{
+    background: black;
+    width: max-content;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+#search input{
+    background: black;
+    border: none;
+    color: white;
+    padding: 5px 0px;
+}
+
+#search input:focus{
+    outline: 0;
+}
+
+#search input::placeholder{
+    color: blueviolet;
+    transition: 0.3s;
+}
+
+#search:hover input::placeholder{
+    color: rgb(149, 91, 203);
+}
+
+/*Dropdown*/
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-anime{
+    display: none;
+    position: absolute;
+    background-color: #0e011ee9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(41,10,78,0.6);
+    border-radius: 7px;
+    padding: 10px 5px;
+    z-index: 1;
+}
+
+.dropdown-content-anime ul{
+    grid-template-columns: 1fr;
+}
+
+.dropdown-content-anime ul li{
+    padding: 7px 0px;
+}
+
+.dropdown:hover .dropdown-content-anime{
+    display: block;
+}
+
+
+.dropdown-content-generos{
+    display: none;
+    position: absolute;
+    background-color: #0e011ee9;
+    width: 80vh;
+    box-shadow: 0px 8px 16px 0px rgba(41,10,78,0.6);
+    border-radius: 7px;
+    padding: 10px 5px;
+    z-index: 1;
+}
+
+.dropdown-content-generos ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 7px;
+}
+
+.dropdown-content-generos ul li{
+    padding: 3px 0px;
+}
+
+.dropdown:hover .dropdown-content-generos{
+    display: block;
+}
+
+footer {
+    background: #0E011E;
+    padding: 10px 0px;
+    text-align: center;
+}

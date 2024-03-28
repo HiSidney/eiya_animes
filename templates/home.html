@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+<title>Eiya Animes | Assista seu anime online</title>
+{% endblock %}
+
+{% block main %}
+<div id="fundo">
+    <h1>Últimos Lançamentos</h1>
+    <div id="sidebar">
+        <div class="conteiner-anime">
+            <a href="#"><img src="{{ url_for('static', filename = '/img/garoto_sorridente.jpg') }}" alt="logo_anime"></a>
+            <a href="#">Legenda</a>
+        </div>
+        <div class="conteiner-anime">
+            <a href="#"><img src="{{ url_for('static', filename = '/img/garoto_sorridente.jpg') }}" alt="logo_anime"></a>
+            <a href="#">Legenda</a>
+        </div>
+        <div class="conteiner-anime">
+            <a href="#"><img src="{{ url_for('static', filename = '/img/garoto_sorridente.jpg') }}" alt="logo_anime"></a>
+            <a href="#">Legenda</a>
+        </div>
+        <div class="conteiner-anime">
+            <a href="#"><img src="{{ url_for('static', filename = '/img/garoto_sorridente.jpg') }}" alt="logo_anime"></a>
+            <a href="#">Legenda</a>
+        </div>
+    </div>
+
+    <h1>Lançamentos</h1>
+    <div class="fundo2">
+        <div class="conteiner">
+            <a href="#"><img src="{{ url_for('static', filename = '/img/fantasmas.png') }}" alt="historico"></a>
+            <a href="#">Legenda</a>
+        </div>
+        <div class="conteiner">
+            <a href="#"><img src="{{ url_for('static', filename = '/img/fantasmas.png') }}" alt="historico"></a>
+            <a href="#">Legenda</a>
+        </div>
+        <div class="conteiner">
+            <a href="#"><img src="{{ url_for('static', filename = '/img/fantasmas.png') }}" alt="historico"></a>
+            <a href="#">Legenda</a>
+        </div>
+        <div class="conteiner">
+            <a href="#"><img src="{{ url_for('static', filename = '/img/fantasmas.png') }}" alt="historico"></a>
+            <a href="#">Legenda</a>
+        </div>
+        <div class="conteiner">
+            <a href="#"><img src="{{ url_for('static', filename = '/img/fantasmas.png') }}" alt="historico"></a>
+            <a href="#">Legenda</a>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/script_home.js')}}"></script>
+{% endblock %}

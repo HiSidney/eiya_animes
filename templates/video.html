@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/anime.css') }}">
+<title>{{capitulos[0][1]}} | Eiya Animes</title>
+{% endblock %}
+
+{% block main %}
+<div id="fundo">   
+    {% for capitulo in capitulos%}
+    <video controls>
+        <source src={{capitulos[0][4]}} type="video/mp4">
+    </video>
+    {% endfor %}
+{% endblock %}
+</div>
