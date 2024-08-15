@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/adm.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Adm Page | Eiya Animes</title>
+</head>
+<body>
+    <header>
+        <a href="/"><img id="logo" src="{{ url_for('static', filename='img/logo2.png')}}" alt="logo"></a>
+    </header>
+    <main>
+        <div id="fundo-branco">
+            <h1>Novo Capítulo</h1>
+            <div class="novo_item">
+                <div class="campo">
+                    <input id="anime_que_capitulo_pertencente" type="text" placeholder="Selecionar anime">
+                </div>
+                <div id="dropdown-content-search-search" class="dropdown-content-search">
+                    <ul id="ul">
+                        
+                    </ul>
+                </div>
+
+                <div class="campo">
+                    <input id="temporada_que_capitulo_pertencente" type="number" placeholder="Selecionar temporada">
+                </div>
+
+                <div class="campo">
+                    <input id="numero_capitulo" type="number" placeholder="Número do Capítulo">
+                </div>
+
+                <div class="campo">
+                    <label for="video_capitulo">Video do Capítulo: </label>
+                    <input id="video_capitulo" type="file" accept="video/*">
+                </div>
+                
+                <div class="campo">
+                    <input class="submit" type="submit" value="Enviar" id="button_capitulo">
+                </div>
+            </div>
+
+            <h1>Novo Anime</h1>
+            <div class="novo_item">
+                <div class="campo">
+                    <input id="nome_anime" type="text" placeholder="Nome do Anime">
+                </div>
+                <div class="campo">
+                    <label for="data_lancamento_anime">Data de lançamento do Anime: </label>
+                    <input id="data_lancamento_anime" type="date">
+                </div>
+                <div class="campo">
+                    <input id="criador_anime" type="text" placeholder="Criador do Anime">
+                </div>
+                <div class="campo">
+                    <label for="logo_anime">Logo do Anime: </label>
+                    <input id="logo_anime" type="file" accept="image/*">
+                </div>
+                <div class="campo">
+                    <input id="dublagem_anime" type="checkbox">
+                    <label for="dublagem_anime">Dublado em pt-br</label>
+                </div>
+                <div class="campo">
+                    <label for="generos">Gêneros: </label>
+                    <ul class="lista_generos">
+                        {% for genero in generos %}
+                        <li><input type="checkbox" name="generos" value={{genero[0]}} id=genero_{{genero[0]}}><label for=genero_{{genero[0]}}> {{genero[1]}}</label></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="campo">
+                    <input id="descricao" type="text" placeholder="Descrição">
+                </div>
+                <div class="campo">
+                    <input class="submit" type="submit" value="Enviar" id="button_anime">
+                </div>
+            </div>
+
+            <h1>Nova Temporada</h1>
+            <div class="novo_item">
+                <div class="campo">
+                    <input id="anime_que_temporada_pertencente" type="number" placeholder="Selecionar anime">
+                </div>
+                <div class="campo">
+                    <input id="num_temporada" type="number" placeholder="Temporada número...">
+                </div>
+                <div class="campo">
+                    <input id="trailer_temporada" type="text" placeholder="Trailer">
+                </div>
+                <div class="campo">
+                    <label for="data_lancamento_temporada">Data de lançamento da Temporada: </label>
+                    <input id="data_lancamento_temporada" type="date">
+                </div>
+                <div class="campo">
+                    <input class="submit" type="submit" value="Enviar" id="button_temporada">
+                </div>
+            </div>
+
+            <h1>Novo Gênero</h1>
+            <div class="novo_item">
+                <div class="campo">
+                    <input id="nome_genero" type="text" placeholder="Gênero">
+                </div>
+                <div class="campo">
+                    <input class="submit" type="submit" value="Enviar" id="button_genero">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/adm.js')}}"></script>
+</body>
+</html>

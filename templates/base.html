@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/faa3c30f58.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/base.css') }}">
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    {% block title %}
+    <link rel="stylesheet" href="style.css">
+    <title>Eiya Animes</title>
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div>
+                    <li><img id="logo" src="{{ url_for('static', filename='img/logo.png')}}" alt="logo"></li>
+                    <li><a href="/">Home</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Gênero <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown-content-generos">
+                            <ul class="genero">
+                                {% for genero in generos %}
+                                <li><a href=/animes/genero/{{genero[0]}} class="itens-lista"><i class="fa-solid fa-caret-right"></i> {{genero[1]}} </a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/random">Random</a></li>
+                    <li><a href="/animes">Todos</a></li>
+                </div>
+
+                <li id="li-search" class="dropdown">
+                    <div id="search">
+                        <input type="text" placeholder="Buscar anime" id="search_conteudo">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </div>
+                    <div id="dropdown-content-search-search" class="dropdown-content-search">
+                        <ul id="ul">
+                            
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a style="display: none;" href="/doacao" id="doacao" aria-label="A paixão pelos animes e mangás nos une! Com sua generosidade, podemos continuar a compartilhar essa paixão com o mundo."><i class="fa-solid fa-inbox"></i> Doações</a>
+                    <a href="/" id="mostrarInfoUser" class="class_button_login"><i class="fa-solid fa-user"></i></a>
+                    <a id="button-login-cadastro" href='/cadastro'><i class="fa-solid fa-user-plus"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="fundo">
+            {% block main %}
+            {% endblock %}
+        </div>
+        <div id="sidebar_info_usuario">
+            <ul id="ul_recebe_info_usuario">
+                <li><a href="/account" id="nome_usuario">Nome Usuário</a></li>
+                <li><a href="/historico" id="historico_user">Histórico</a></li>
+                <li><a href="/animes_salvos" id="retorna_animes_salvos">Animes Salvos</a></li>
+                <li class="li_encerrar_sessao"><a href="/encerrar_sessao" class="encerrar_sessao">Sair da Conta</a></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvedor: Sidney Avelino Felix - Feito com muito <i class="fa-solid fa-heart"></i> e café !!!</p>
+        <p>&copy; Copyright - Todos os Direitos Reservados</p>
+    </footer>
+    {% block javascript %}
+    <script src="{{ url_for('static', filename='js/base.js')}}"></script>
+    {% endblock %}
+    <script src="{{ url_for('static', filename='js/base.js')}}"></script>
+
+    <a id="botao_topo" href="#"><i class="fa-solid fa-caret-up"></i></a>
+</body>
+</html>

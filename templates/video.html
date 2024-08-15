@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/anime.css') }}">
+<title>{{capitulos[0][1]}} ep. {{capitulos[0][2]}} | Eiya Animes</title>
+<span id="quant_capitulos" style="display: none;">{{quant_capitulos}}</span>
+{% endblock %}
+
+{% block main %}   
+{% for capitulo in capitulos%}
+<video controls class="video_anime">
+    <source src={{capitulos[0][4]}} type="video/mp4">
+</video>
+{% endfor %}
+<div class="barra_video">
+    <nav>
+        <ul>
+            <li><a class="botao" id="botao_esquerda" id_capitulo={{capitulos[0][2]}} id_temporada={{capitulos[0][5]}} id_anime={{capitulos[0][0]}}>&lt;</a></li>
+            <li><a href=/animes/{{capitulos[0][0]}} class="nome_anime">{{capitulos[0][1]}} - Episódio: {{capitulos[0][2]}}</a></li>
+            <li><a class="botao" id="botao_direita" id_capitulo={{capitulos[0][2]}} id_temporada={{capitulos[0][5]}} id_anime={{capitulos[0][0]}}>&gt;</a></li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/video.js')}}"></script>
+{% endblock %}

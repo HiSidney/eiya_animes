@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(/static/img/fundos/fundo_serio2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#form{
+    grid-column: 2;
+    padding: 50px 20px;
+    background: #ffffffcc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
+    margin-top: 20%;
+}
+
+#form label{
+    margin-top: 20px;
+}
+
+#form label,input{
+    display: block;
+}
+
+#form .input{
+    border-radius: 5px;
+    padding: 2px 3px;
+    transition: 0.2s;
+}
+
+#form .input_button{
+    width: 160px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0px 20px 0px;
+
+    transition: 0.2s;
+}
+
+#form .input:hover{
+    background: rgb(237, 237, 237);
+}
+
+#form h1{
+    font-size: 2rem;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input_button{
+    cursor: pointer;
+    background: blueviolet;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: black;
+    transition: 0.5s;
+}
+
+.input_button:hover{
+    box-shadow: 2px 2px 10px black;
+}
+
+.link{
+    padding: 10px;
+    text-decoration: none;
+    color: blueviolet;
+    transition: 0.5s;
+}
+
+.link:hover{
+    color: blueviolet;
+    text-shadow: 2px 2px 10px blueviolet;
+}
+
+.div_a_img_logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.div_a_img_logo img {
+    width: 300px
+}

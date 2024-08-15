@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/account.css') }}">
+<title>Eiya Account | Eiya Animes</title>
+{% endblock %}
+
+{% block main %}
+<div class="campo">
+    <p>E-mail: </p>
+    <input id="email" class="campos_das_infos" value="sidney@gmail.com" disabled>
+</div>
+<div class="campo">
+    <p>Nome do Usuário: </p>
+    <input id="nome" class="campos_das_infos" value="Sidney" disabled>
+</div>
+<div class="campo">
+    <p>Senha: </p>
+    <input id="senha" class="campos_das_infos" value="Sidney123" disabled>
+</div>
+
+<div class="div_buttons" >
+    <input class="submit" type="submit" value="Editar" id="button_editar">
+    <input class="submit" type="submit" value="Salvar" id="button_salvar">
+</div>
+<input class="submit_delete" type="submit" value="Excluir" id="button_excluir">
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/account.js')}}"></script>
+{% endblock %}

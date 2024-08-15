@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/historico.css') }}">
+<title>Eiya Animes | Assista seu anime online</title>
+{% endblock %}
+
+{% block main %}
+<div class="titulo_excluir">
+    <h1>Veja seu histórico:</h1>
+    <input type="submit" value="Excluir histórico" id="excluir_historico">
+</div>
+
+<div id="fundo2">
+    {% for i in historico %}
+    <div class="conteiner">
+        <a href=/animes-{{i[3]}}/tem-{{i[4]}}/cap-{{i[5]}}><img src="{{i[6]}}" alt="historico"></a>
+        <a href=/animes-{{i[3]}}/tem-{{i[4]}}/cap-{{i[5]}}>{{i[0]}}</a>
+        <p>Episódio {{i[5]}}</p>
+        <p>{{i[7]}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/historico.js')}}"></script>
+{% endblock %}

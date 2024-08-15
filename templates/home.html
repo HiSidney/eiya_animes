@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+<title>Eiya Animes | Assista seu anime online</title>
+{% endblock %}
+
+{% block main %}
+<h1>Lançamentos</h1>
+<div id="sidebar">
+    <div class="conteiner-anime">
+        <a href="#"><img src="{{ url_for('static', filename = '/img/garoto_sorridente.jpg') }}" alt="logo_anime"></a>
+        <a href="#">Legenda</a>
+    </div>
+</div>
+
+<h1>Últimos episódios adicionados</h1>
+<div id="fundo2">
+    <div class="conteiner">
+        <a href="#"><img src="{{ url_for('static', filename = '/img/fantasmas.png') }}" alt="video"></a>
+        <a href="#">Legenda</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/home.js')}}"></script>
+{% endblock %}

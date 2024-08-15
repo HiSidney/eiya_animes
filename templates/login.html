@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/cadastro_login.css') }}">
+    <title>Faça seu login | Eiya Animes</title>
+</head>
+<body>
+    <div id="form">
+        <div class="div_a_img_logo">
+            <a href="/">
+                <img src="{{ url_for('static', filename = 'img/logo2.png') }}" alt="logo" >
+            </a>
+        </div>
+        <h1>Faça seu Login</h1>
+        <label for="login_mail">Digite seu email:</label>
+        <input class="input" id="login_mail" type="text">
+
+        <label for="senha">Digite sua senha:</label>
+        <input class="input" id="senha" type="password">
+
+        <input class="input_button" id="button_login" type="submit" value="Entrar">
+
+        <a class="link" href="/cadastro">Crie sua conta!</a>
+        <a class="link" href="#">Esqueceu sua senha?</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/login.js')}}"></script>
+</body>
+</html>

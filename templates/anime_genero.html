@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/todos_animes.css') }}">
+<title>Eiya Animes | Assista seu anime online</title>
+{% endblock %}
+
+{% block main %}
+{% if animes == []: %}
+<h1>Nenhum</h1>
+{% else: %}
+<h1>{{animes[0][9]}}</h1>
+{% endif %}
+
+<div id="fundo2">
+    {% for anime in animes %}
+    <div class="conteiner-anime">
+        <a href=/animes/{{anime[0]}}><img src={{anime[2]}} alt="{{anime[1]}}"></a>
+        <a href=/animes/{{anime[0]}}>{{anime[1]}}</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

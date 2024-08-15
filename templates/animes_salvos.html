@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/todos_animes.css') }}">
+<title>Eiya Animes | Assista seu anime online</title>
+{% endblock %}
+
+{% block main %}
+
+<h1>Todos os Animes Salvos</h1>
+<div id="fundo2">
+    <div class="conteiner-anime">
+        <a href="#"><img src="{{ url_for('static', filename = '/img/garoto_sorridente.jpg') }}" alt="historico"></a>
+        <a href="#">Nomes</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/animes_salvos.js')}}"></script>
+{% endblock %}

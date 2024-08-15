@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/anime.css') }}">
+<title>{{anime.NomeAnime}} | Eiya Animes</title>
+<span id="span_id_anime" style="display: none;">{{anime.id_anime}}</span>
+{% endblock %}
+
+{% block main %}
+<div id="fundo2">
+    <div class="parte_superior">
+        <div class="div_logo_anime"><img id="logo_anime" src="{{ anime.logo_anime }}" alt="logo_anime"></div>
+        <div class="descricao">
+            <h1 id="titulo">{{anime.NomeAnime}}</h1>
+            <div id="div_genero">
+                <nav>
+                    <ul id="lista-genero">
+                        {% for ligacao_anime_genero in ligacao_anime_genero %}
+                        <li><a href=genero/{{ligacao_anime_genero[0]}} class="itens-lista-genero"> {{ligacao_anime_genero[1]}} </a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="div_salvar_anime">
+                <label class="label_salvar_anime" for="anime_salvo">
+                    <input type="checkbox" id="anime_salvo">
+                    <span><i class="fa-solid fa-bookmark"></i></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <div id="episodios-info-trailer">
+        <ul id="lista-ep_info_trailer">
+            <li><button type="button" class="itens-lista-ep_info_trailer" id="ep_click" onclick="troca_ep_info_trailer('ep')">Episódios</button type="button"></li>
+            <li><button type="button" class="itens-lista-ep_info_trailer" id="desc" onclick="troca_ep_info_trailer('desc')">Informações</button type="button"></li>
+            <li><button type="button" class="itens-lista-ep_info_trailer" id="trai" onclick="troca_ep_info_trailer('trai')">Trailer</button type="button"></li>
+        </ul>
+    </div>
+
+    <div id="parte_inferior">
+        <div id="episodios">
+            <nav>
+                <ul>
+                    {% if temporadas == None: %}
+                        <li></li>
+                    {% else: %}
+                        {% for temporada in range(temporadas) %}
+                        <li>
+                            <h1 class="titulo_temporada" id="id_titulo_temporada">{{temporada+1}}° Temporada</h1>
+                            <div id="div_lista_episodios">
+                                <ul id="lista-episodios">
+                                    {% for capitulo in capitulos%}
+                                    {%if capitulo[2] == (temporada+1)%}
+                                    <li class="itens-lista-episodios">
+                                        <a href=/animes-{{capitulo[3]}}/tem-{{capitulo[2]}}/cap-{{capitulo[0]}}>Episódio {{capitulo[0]}}</a>
+                                        <p class="date">{{capitulo[1]}}</p>
+                                    </li>
+                                    {%endif%}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+        
+        <div id="descricao">
+            <h1>Sinopse</h1>
+            <pre>{{anime.descricao}}</pre>
+            
+        </div>
+
+        <div id="trailer">
+            <div class="video">
+                <h1>Video Trailer</h1>
+                {% for i in trailers %}
+                <p>Temporada {{i[0]}}</p>
+                <iframe src={{i[1]}} title="trailer"></iframe>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="{{ url_for('static', filename='js/anime.js')}}"></script>
+{% endblock %}

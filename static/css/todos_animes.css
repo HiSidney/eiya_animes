@@ -1,0 +1,44 @@
+#fundo2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+#fundo h1{
+    color: white;
+    font-size: 1.7rem;
+    font-family: 'Libre Baskerville', serif;
+    padding-left: 20px;
+    border-left: 3px solid blueviolet;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+
+.conteiner-anime{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 120px;
+}
+
+.conteiner-anime img {
+    width: 120px;
+    height: 180px;
+}
+
+.conteiner-anime:hover img {
+    opacity: 0.8;
+}
+
+.conteiner-anime a{
+    text-decoration: none;
+    color: #d8d8d8;
+    text-align: center;
+}
+
+.conteiner-anime:hover a {
+    color: white;
+    text-decoration: underline;
+    text-shadow: 3px 3px 10px white;
+}

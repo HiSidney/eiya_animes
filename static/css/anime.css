@@ -1,0 +1,306 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+
+#fundo{
+    grid-column: 2;
+    padding: 50px 20px;
+    background: #0e011ef4;
+    min-height: 100vh;
+}
+
+/*cabecalho 2*/
+#titulo{
+    color: #d8d8d8;
+    font-size: 2rem;
+    font-family: 'Libre Baskerville', serif;
+    padding: 10px 0px;
+}
+
+#lista-genero{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.itens-lista-genero{
+    color: #d8d8d8;
+    text-decoration: none;
+    padding: 0px 5px;
+}
+
+.itens-lista-genero:hover{
+    text-shadow: 2px 2px 10px #d8d8d8;
+    text-decoration: underline;
+}
+
+
+/*ep-info-trailer*/
+#lista-ep_info_trailer{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.itens-lista-ep_info_trailer{
+    padding: 0px 15px;
+    color: #d8d8d8;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+}
+
+.itens-lista-ep_info_trailer:hover{
+    text-shadow: 2px 2px 10px #d8d8d8;
+    text-decoration: underline;
+}
+
+#episodios-info-trailer{
+    border-bottom: 2px solid #290A4E;
+    border-top: 2px solid #290A4E;
+    padding: 10px 0px;
+}
+
+/*episodios*/
+#ep{
+    background: transparent;
+}
+
+#ep_click{
+    background: blueviolet;
+    box-shadow: 2px 2px 10px #290A4E;
+}
+
+#episodios{
+    display: block;
+}
+
+.img_capitulo{
+    width: 90px;
+}
+
+#lista-episodios{
+    margin: 10px 30px;
+}
+
+.itens-lista-episodios{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.itens-lista-episodios:nth-child(-n + 11){
+    border-bottom: #290A4E 1px solid;
+}
+
+.itens-lista-episodios a{
+    color: #d8d8d8;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.itens-lista-episodios a:hover{
+    text-shadow: 2px 2px 10px #d8d8d8;
+    text-decoration: underline;
+}
+
+.date{
+    color: #d8d8d8;
+    font-size: small;
+}
+
+/*informacoes*/
+#desc{
+    background: transparent;
+}
+
+#desc_click{
+    background: blueviolet;
+    box-shadow: 2px 2px 10px #290A4E;
+}
+
+#descricao{
+    display: none;
+}
+
+#descricao{
+    padding: 20px;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+#descricao h1{
+    color: #d8d8d8;
+    font-size: medium;
+    font-family: 'Libre Baskerville', serif;
+    padding: 10px 0px;
+}
+
+#descricao p{
+    color: #d8d8d8;
+    font-size: small;
+    margin-top: 30px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+/*trailer*/
+#trailer h1{
+    color: #d8d8d8;
+    font-size: medium;
+    font-family: 'Libre Baskerville', serif;
+    padding: 10px 0px;
+}
+
+#trai{
+    background: transparent;
+}
+
+#trai_click{
+    background: blueviolet;
+    box-shadow: 2px 2px 10px #290A4E;
+}
+
+#trailer{
+    display: none;
+    margin-top: 20px;
+}
+
+#trailer .video p {
+    padding-bottom: 10px;
+}
+
+#trailer .video{
+    text-align: center;
+    align-items: center;
+}
+
+#trailer iframe{
+    max-width: 80%;
+}
+
+/*reto*/
+#fundo2{
+    grid-template-rows: 1fr 1fr;
+}
+
+#logo_anime{
+    width: 200px;
+    padding-right: 20px;
+}
+
+.div_logo_anime{
+    text-align: center;
+}
+
+.parte_superior{
+    grid-row: 1;
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.parte_inferior{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.conteiner{
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.conteiner img{
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.conteiner img:hover{
+    opacity: 0.8;
+}
+
+.conteiner a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* video */
+#fundo .video_anime {
+    width: 100%;
+}
+
+.barra_video {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #290A4E;
+}
+
+.barra_video nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.barra_video nav ul li a {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.barra_video nav ul li .botao {
+    border: 2px solid #290A4E;
+    cursor: pointer;
+}
+
+.barra_video nav ul li .nome_anime {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.barra_video nav ul li .nome_anime:hover {
+    text-decoration: underline;
+}
+
+.div_salvar_anime {
+    margin-top: 20px;
+    align-items: center;
+}
+
+.label_salvar_anime {
+    position: relative;
+    cursor: pointer;
+}
+
+.label_salvar_anime input {
+    appearance: none;
+}
+
+.label_salvar_anime span {
+    position: absolute;
+    transition: 0.3s;
+}
+
+.label_salvar_anime span i {
+    color: #892be290;
+    font-size: 30px;
+}
+
+.label_salvar_anime input:checked ~ span i {
+    color: #aa50ff;
+    text-shadow: 3px 3px 10px blueviolet;
+}
+
+.titulo_temporada {
+    padding: 15px;
+}

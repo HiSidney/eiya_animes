@@ -1,0 +1,61 @@
+main {
+    background: #0e011e;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+#fundo {
+    grid-column: 2;
+    margin-top: 30px;
+}
+
+.campo {
+    padding: 10px 0px;
+}
+
+.campo input {
+    width: 100%;
+}
+
+.campos_das_infos {
+    font-size: 25px;
+    border: 1px solid blueviolet;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.submit {
+    font-size: 20px;
+    color: white;
+    background: blueviolet;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.div_buttons {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.submit_delete{
+    font-size: 20px;
+    color: white;
+    background: #700000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 50px 10px;
+    float: right;
+}
+
+.submit_delete input:hover {
+    box-shadow: 3px 3px 10px #700000;
+}

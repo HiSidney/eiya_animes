@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#fundo h1{
+    color: #d8d8d8;
+    font-size: 1.7rem;
+    font-family: 'Libre Baskerville', serif;
+    padding-left: 20px;
+    border-left: 3px solid blueviolet;
+    margin-top: 50px;
+}
+
+#fundo2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 180px;
+}
+
+.conteiner img{
+    width: 180px;
+    border-radius: 10px;
+}
+
+.conteiner:hover img {
+    opacity: 0.8;
+}
+
+.conteiner:hover a {
+    color: white;
+    text-decoration: underline;
+    text-shadow: 3px 3px 10px white;
+}
+
+.conteiner a{
+    text-decoration: none;
+    color: rgb(216, 216, 216);
+}
+
+.conteiner p {
+    color: #8b8b8b;
+}
+
+.titulo_excluir {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo_excluir input {
+    background-color: #700000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.titulo_excluir input:hover {
+    box-shadow: 3px 3px 10px #700000;
+}

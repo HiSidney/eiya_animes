@@ -1,0 +1,113 @@
+#fundo h1{
+    color: white;
+    font-size: 1.7rem;
+    font-family: 'Libre Baskerville', serif;
+    padding-left: 20px;
+    border-left: 3px solid blueviolet;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#fundo2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 180px;
+}
+
+.conteiner img{
+    width: 180px;
+    border-radius: 10px;
+}
+
+.conteiner:hover img {
+    opacity: 0.8;
+}
+
+.conteiner:hover a {
+    color: white;
+    text-decoration: underline;
+    text-shadow: 3px 3px 10px white;
+}
+
+.conteiner a{
+    text-decoration: none;
+    color: #d8d8d8;
+}
+
+.conteiner p {
+    color: #8b8b8b;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    overflow: auto;
+    margin: 20px 0;
+    max-width: 90vw;
+    padding-bottom: 20px;
+}
+
+#sidebar div{
+    margin: 0 10px 10px, 10px;
+}
+
+#sidebar::-webkit-scrollbar{
+    width: 10px;
+}
+
+#sidebar::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+}
+
+#sidebar::-webkit-scrollbar-thumb{
+    background: #8a2be2;
+    border-radius: 5px;
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: #892be29f; 
+}
+
+.conteiner-anime{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 10px;
+    width: 120px;
+}
+
+.conteiner-anime img {
+    width: 120px;
+    height: 180px;
+}
+
+.conteiner-anime:hover img {
+    opacity: 0.8;
+}
+
+.conteiner-anime a{
+    text-decoration: none;
+    color: #d8d8d8;
+    text-align: center;
+}
+
+.conteiner-anime:hover a {
+    color: white;
+    text-decoration: underline;
+    text-shadow: 3px 3px 10px white;
+}
+
+#input_sidebar_button{
+    cursor: pointer;
+}
