@@ -13,7 +13,10 @@
 }
 
 body{
-    background: url('/static/img/fundos/honkai.jpg');
+    background: 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    url('/static/img/fundos/honkai.jpg');
+    
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
