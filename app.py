@@ -1,7 +1,6 @@
 from flask import Flask,render_template,request,jsonify,redirect,make_response
 app = Flask(__name__)
 
-#import os.path
 import bancoDados
 import cv2
 import os
