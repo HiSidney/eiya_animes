@@ -1,13 +1,11 @@
 #def conecta_ao_banco(driver,server,database):
 #    string_conexao = f"DRIVER={driver};SERVER={server};DATABASE={database}"
 #    return pyodbc.connect(string_conexao)
-#
-#cnxn = conecta_ao_banco('SQL Server','DESKTOP-306QNCK\SQLEXPRESS','eiya_animes')
+
 #cursor = cnxn.cursor()
 import pyodbc
 from datetime import datetime, timedelta
-#from datetime import datetime
-#cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=DESKTOP-KK046J1\SQLEXPRESS;DATABASE=eiya_animes')
+
 cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=DESKTOP-306QNCK\SQLEXPRESS;DATABASE=eiya_animes')
 cursor = cnxn.cursor()
 
